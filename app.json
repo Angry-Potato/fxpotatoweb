@@ -1,0 +1,8 @@
+{
+  "name": "FxPotatoWeb",
+  "description": "An example usage of the FxPotato gem",
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
