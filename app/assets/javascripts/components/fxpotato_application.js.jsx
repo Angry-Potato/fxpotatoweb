@@ -1,4 +1,7 @@
 var FxPotatoApplication = React.createClass({
+  handleConvert: function(event) {
+    
+  },
   render: function() {
     return(
       <div className="container">
@@ -8,6 +11,7 @@ var FxPotatoApplication = React.createClass({
         </div>
         <div className="row">
           <div className="col-md-12">
+            <ConvertForm handleConvert={this.handleConvert} />
           </div>
         </div>
       </div>
