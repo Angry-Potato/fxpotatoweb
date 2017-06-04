@@ -1,6 +1,11 @@
 var FxPotatoApplication = React.createClass({
-  handleConvert: function(event) {
-    
+  getInitialState: function() {
+    return { conversions: [] };
+  },
+  handleConvert: function(conversion) {
+    var conversions = this.state.conversions;
+    conversions.push(conversion);
+    this.setState({ conversions: conversions });
   },
   render: function() {
     return(
@@ -12,6 +17,11 @@ var FxPotatoApplication = React.createClass({
         <div className="row">
           <div className="col-md-12">
             <ConvertForm handleConvert={this.handleConvert} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <ConversionTable conversions={this.state.conversions} />
           </div>
         </div>
       </div>

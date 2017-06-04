@@ -33,12 +33,10 @@ var ConvertForm = React.createClass({
     }
   },
   validForm: function() {
-    console.log(this.state);
     return this.state.base_key && this.state.target_key &&
         this.state.date && this.state.amount;
   },
   handleChange: function(e) {
-    console.log(e);
     var input_name = e.target.name;
     var value = e.target.value;
     this.setState({ [input_name] : value });
