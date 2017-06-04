@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class DashboardControllerTest < ActionDispatch::IntegrationTest
+class ConvertControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get '/'
+    post '/api/convert'
     assert_response :success
   end
 
