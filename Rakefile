@@ -4,3 +4,8 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+desc "Run tests in a container, with a postgres container test db"
+task :docker_test do
+  sh %{ docker-compose -f docker-compose-test.yml down && docker-compose -f docker-compose-test.yml build --force-rm && docker-compose -f docker-compose-test.yml run --rm test }
+end

@@ -8,12 +8,12 @@ services:
     ports:
       - "5432"
 
-  web:
+  test:
     build: .
-    command: rake test
+    command: sh -c "./waitfordb.sh && rake test"
     volumes:
       - .:/fxpotatoweb
     ports:
       - "3000:3000"
-    links:
+    depends_on:
       - db
