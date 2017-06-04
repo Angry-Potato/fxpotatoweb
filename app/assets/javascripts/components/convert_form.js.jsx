@@ -20,10 +20,9 @@ var ConvertForm = React.createClass({
       $.ajax({
         url: '/api/convert',
         method: 'POST',
-        data: self.state,
+        data: { conversion: self.state },
         success: function(data) {
           self.props.handleConvert(data);
-          self.setState(self.getInitialState());
         },
         error: function(xhr, status, error) {
           alert('Cannot convert: ', error);
