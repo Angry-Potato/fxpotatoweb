@@ -1,3 +1,6 @@
+var ConvertForm = require('./convert_form');
+var ConversionTable = require('./conversion_table');
+
 var FxPotatoApplication = React.createClass({
   getInitialState: function() {
     return { conversions: [] };
@@ -28,3 +31,5 @@ var FxPotatoApplication = React.createClass({
     )
   }
 });
+
+module.exports = FxPotatoApplication;

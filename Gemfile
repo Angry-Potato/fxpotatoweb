@@ -9,6 +9,7 @@ end
 gem 'rails', '~> 5.1.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'browserify-rails', '~> 4.2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'bootstrap-sass', '~> 3.3'

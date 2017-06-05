@@ -16,3 +16,5 @@ var Conversion = React.createClass({
     )
   }
 });
+
+module.exports = Conversion;

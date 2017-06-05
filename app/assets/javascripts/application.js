@@ -14,4 +14,5 @@
 //= require react
 //= require react_ujs
 //= require jquery
-//= require components
+
+require('./components');

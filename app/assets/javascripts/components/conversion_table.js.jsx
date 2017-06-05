@@ -1,3 +1,5 @@
+var Conversion = require('./conversion');
+
 var ConversionTable = React.createClass({
   render: function() {
     var conversions = [];
@@ -28,3 +30,5 @@ var ConversionTable = React.createClass({
     )
   }
 });
+
+module.exports = ConversionTable;

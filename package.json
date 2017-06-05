@@ -2,6 +2,14 @@
   "name": "fxpotatoweb",
   "private": true,
   "dependencies": {
-    "jquery": "^3.2.1"
+    "browserify": "^14.4.0",
+    "browserify-incremental": "^3.1.1",
+    "jquery": "^3.2.1",
+    "react-toolbox-build4server": "^0.16.2",
+    "reactify": "^1.1.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
   }
 }

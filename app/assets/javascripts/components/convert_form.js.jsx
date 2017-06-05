@@ -85,3 +85,5 @@ var ConvertForm = React.createClass({
     )
   }
 });
+
+module.exports = ConvertForm;
