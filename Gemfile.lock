@@ -79,7 +79,7 @@ GEM
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
-    fxpotato (1.0.2)
+    fxpotato (1.1.1)
       nokogiri (~> 1.6)
       thor (~> 0.19)
       whenever (~> 0.9)

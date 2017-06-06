@@ -1,5 +1,6 @@
-FROM ruby:2.3.3
-RUN apt-get update -qq && apt-get install -y postgresql build-essential libpq-dev nodejs
+FROM mwallasch/docker-ruby-node
+
+RUN apt-get update -qq && apt-get install -y postgresql build-essential libpq-dev
 RUN mkdir /fxpotatoweb
 WORKDIR /fxpotatoweb
 COPY waitfordb.sh /fxpotatoweb/

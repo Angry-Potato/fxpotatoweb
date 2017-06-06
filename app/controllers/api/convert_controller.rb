@@ -4,7 +4,7 @@ module Api
 
     def index
       given_params = convert_params
-      render json: conversion(FxPotato.at(given_params[:date], given_params[:base_key], given_params[:target_key]), given_params[:amount])
+      render json: conversion(FxPotato.at(given_params[:base_key], given_params[:target_key], given_params[:date]), given_params[:amount])
     end
 
     private
