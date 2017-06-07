@@ -1,6 +1,9 @@
 var Conversion = require('./conversion');
 
 var ConversionTable = React.createClass({
+  propTypes: {
+    conversions: React.PropTypes.array
+  },
   render: function() {
     var conversions = [];
     var propsConversions = this.props.conversions.sort(function(first, second) {
