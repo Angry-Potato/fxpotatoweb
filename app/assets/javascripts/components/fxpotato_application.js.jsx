@@ -8,6 +8,7 @@ var FxPotatoApplication = React.createClass({
   },
   handleConvert: function(conversion) {
     var conversions = this.state.conversions;
+    conversion.created = new Date().toISOString();
     conversions.push(conversion);
     this.setState({ conversions: conversions });
   },
@@ -16,6 +17,7 @@ var FxPotatoApplication = React.createClass({
       <div>
         <Nav />
         <ConvertForm handleConvert={this.handleConvert} />
+        <ConversionTable conversions={this.state.conversions} />
       </div>
     )
   }
