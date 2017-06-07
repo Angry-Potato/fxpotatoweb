@@ -12,22 +12,37 @@ var FxPotatoApplication = React.createClass({
   },
   render: function() {
     return(
-      <div className="container">
-        <div className="jumbotron">
-          <h1>FxPotato demo</h1>
-          <p>by Liam Humphreys</p>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <ConvertForm handleConvert={this.handleConvert} />
+      <nav>
+        <div className="nav-wrapper">
+          <a href="#!" className="brand-logo">FxPotatoWeb</a>
+          <ul className="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>
+          <a className="right dropdown-button hide-on-large-only" href="#!" data-activates="dropdown1"><i className=" material-icons" style={{"paddingRight": "8px"}}>menu</i></a>
+          <ul id="dropdown1" className="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li className="divider"></li>
+            <li><a href="#!">three</a></li>
+          </ul>
+
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <ConvertForm handleConvert={this.handleConvert} />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <ConversionTable conversions={this.state.conversions} />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">
-            <ConversionTable conversions={this.state.conversions} />
-          </div>
-        </div>
-      </div>
+      </nav>
     )
   }
 });
