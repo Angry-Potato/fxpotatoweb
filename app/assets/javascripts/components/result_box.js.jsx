@@ -1,3 +1,5 @@
+var ResultCard = require('./result_card');
+
 var ResultBox = React.createClass({
   propTypes: {
     result: React.PropTypes.object
@@ -10,14 +12,7 @@ var ResultBox = React.createClass({
           <div className="row center-align">
             <div className="col s0 m2 l3" />
             <div className="col s12 m8 l6">
-              <div className="card blue-grey darken-1">
-                <div className="card-content white-text">
-                  <span className="card-title">Result!</span>
-                    <p className="flow-text">{`${r.base.amount}(${r.base.key}) == ${r.target.amount}(${r.target.key})`}</p>
-                    <p className="flow-text">{`That's an exchange rate of: ${r.rate}`}</p>
-                    <p className="flow-text">{`On ${r.date}`}</p>
-                </div>
-              </div>
+              <ResultCard result={this.props.result} />
             </div>
             <div className="col s0 m2 l3" />
           </div>
