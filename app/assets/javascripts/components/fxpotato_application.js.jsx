@@ -21,18 +21,6 @@ var FxPotatoApplication = React.createClass({
             <i className=" material-icons" style={{"paddingRight": "8px"}}>menu</i>
           </a>
           <Menu id="dropdown1" className="dropdown-content" />
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <ConvertForm handleConvert={this.handleConvert} />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <ConversionTable conversions={this.state.conversions} />
-              </div>
-            </div>
-          </div>
         </div>
       </nav>
     )
