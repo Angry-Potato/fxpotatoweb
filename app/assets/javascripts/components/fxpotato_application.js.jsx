@@ -1,5 +1,6 @@
 var ConvertForm = require('./convert_form');
 var ConversionTable = require('./conversion_table');
+var Menu = require('./menu');
 
 var FxPotatoApplication = React.createClass({
   getInitialState: function() {
@@ -15,20 +16,11 @@ var FxPotatoApplication = React.createClass({
       <nav>
         <div className="nav-wrapper">
           <a href="#!" className="brand-logo">FxPotatoWeb</a>
-          <ul className="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-          </ul>
-          <a className="right dropdown-button hide-on-large-only" href="#!" data-activates="dropdown1"><i className=" material-icons" style={{"paddingRight": "8px"}}>menu</i></a>
-          <ul id="dropdown1" className="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li className="divider"></li>
-            <li><a href="#!">three</a></li>
-          </ul>
-
+          <Menu className="right hide-on-med-and-down"/>
+          <a className="right dropdown-button hide-on-large-only" href="#!" data-activates="dropdown1" data-constrainwidth="false">
+            <i className=" material-icons" style={{"paddingRight": "8px"}}>menu</i>
+          </a>
+          <Menu id="dropdown1" className="dropdown-content" />
           <div className="container">
             <div className="row">
               <div className="col-md-12">
