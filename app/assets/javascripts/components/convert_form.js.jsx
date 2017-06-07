@@ -13,6 +13,22 @@ var ConvertForm = React.createClass({
       amount: 0
     }
   },
+  setDateInputToDatePickerSelection: function(t) {
+    var input = $('.datepicker');
+    var picker = input.pickadate('picker');
+    var selection = picker.get('select', 'yyyy-mm-dd');
+
+    input[0].value = selection;
+    this.handleChange({target: {name: 'date', value: selection}})
+  },
+  showDatePicker: function() {
+    var input = $('.datepicker').pickadate({
+      selectMonths: true,
+      onClose: this.setDateInputToDatePickerSelection,
+      onSet: this.setDateInputToDatePickerSelection
+    });
+    return input;
+  },
   handleConvert: function(e) {
     e.preventDefault();
     var self = this;
@@ -43,45 +59,63 @@ var ConvertForm = React.createClass({
   },
   render: function() {
     return(
-      <form className="form-inline" onSubmit={this.handleConvert}>
-        <div className="form-group">
-          <input type="text"
-                 className="form-control"
-                 name="base_key"
-                 placeholder="Base currency, e.g. GBP"
-                 ref="base_key"
-                 value={this.state.base_key}
-                 onChange={this.handleChange} />
-        </div>
-        <div className="form-group">
-          <input type="text"
-                 className="form-control"
-                 name="target_key"
-                 placeholder="Target currency, e.g. USD"
-                 ref="target_key"
-                 value={this.state.target_key}
-                 onChange={this.handleChange} />
-        </div>
-        <div className="form-group">
-          <input type="date"
-                 className="form-control"
-                 name="date"
-                 placeholder="Convert for specific date"
-                 ref="date"
-                 value={this.state.date}
-                 onChange={this.handleChange} />
-        </div>
-        <div className="form-group">
-          <input type="text"
-                 className="form-control"
-                 name="amount"
-                 placeholder="Amount, e.g. 150"
-                 ref="amount"
-                 value={this.state.amount}
-                 onChange={this.handleChange} />
-        </div>
-        <button type="submit" className="btn btn-primary">Convert</button>
-      </form>
+      <div className="container center-align section" >
+        <form className="col s12" onSubmit={this.handleConvert}>
+          <div className="row">
+            <div className="input-field col s12 m6 l3">
+              <input
+                id="base_key"
+                type="text"
+                className="validate"
+                name="base_key"
+                ref="base_key"
+                value={this.state.base_key}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="base_key">Base currency</label>
+            </div>
+            <div className="input-field col s12 m6 l3">
+              <input
+                id="target_key"
+                type="text"
+                className="validate"
+                name="target_key"
+                ref="target_key"
+                value={this.state.target_key}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="target_key">Target currency</label>
+            </div>
+            <div className="input-field col s12 m6 l3">
+              <input
+                id="amount"
+                type="number"
+                className="validate"
+                name="amount"
+                ref="amount"
+                value={this.state.amount}
+                onChange={this.handleChange}
+              />
+              <label htmlFor="amount">Amount</label>
+            </div>
+            <div className="input-field col s12 m6 l3">
+              <input
+                id="date"
+                type="text"
+                className="datepicker validate"
+                onFocus={this.showDatePicker}
+                name="date"
+                ref="date"
+                value={this.state.date}
+              />
+              <label htmlFor="date">Date</label>
+            </div>
+          </div>
+          <button className="btn waves-effect waves-light" type="submit" name="action">
+            <i className="fa fa-dollar" /> Convert
+          </button>
+        </form>
+      </div>
     )
   }
 });

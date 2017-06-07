@@ -13,7 +13,7 @@ gem 'browserify-rails', '~> 4.2'
 gem 'materialize-sass', '~> 0.98.2'
 gem 'font-awesome-sass', '~> 4.7'
 gem 'react-rails', '~> 2.2'
-gem 'fxpotato', '~> 1.0'
+gem 'fxpotato', '~> 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
