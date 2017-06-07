@@ -13,7 +13,9 @@ var FxPotatoApplication = React.createClass({
   handleConvert: function(conversion) {
     var conversions = this.state.conversions;
     conversion.created = new Date().toISOString();
-    conversions.push(conversion);
+    if(conversion.rate !== null) {
+      conversions.push(conversion);
+    }
     this.setState({
       conversions: conversions,
       latest_conversion: conversion
