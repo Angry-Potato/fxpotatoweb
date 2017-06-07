@@ -12,9 +12,6 @@ gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'browserify-rails', '~> 4.2'
 gem 'materialize-sass', '~> 0.98.2'
 gem 'font-awesome-sass', '~> 4.7'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-gem 'bootstrap-sass', '~> 3.3'
 gem 'react-rails', '~> 2.2'
 gem 'fxpotato', '~> 1.0'
 # Use Puma as the app server
