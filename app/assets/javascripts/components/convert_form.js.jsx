@@ -9,8 +9,8 @@ var ConvertForm = React.createClass({
     return {
       base_key: '',
       target_key: '',
-      date: '',
-      amount: 0
+      date: new Date().toISOString().slice(0,10),
+      amount: 1
     }
   },
   setDateInputToDatePickerSelection: function(t) {
